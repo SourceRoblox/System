@@ -1,0 +1,224 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Key = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local Shadow = Instance.new("Frame")
+local Image = Instance.new("ImageLabel")
+local Subtitle = Instance.new("TextLabel")
+local Input = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Carregando = Instance.new("UIGradient")
+local Sucesso = Instance.new("UIGradient")
+local erro = Instance.new("UIGradient")
+local InputBox = Instance.new("TextBox")
+local KeyNote = Instance.new("TextLabel")
+local NoteTitle = Instance.new("TextLabel")
+local NoteMessage = Instance.new("TextLabel")
+local Hide = Instance.new("ImageButton")
+local Pattern = Instance.new("ImageLabel")
+
+--Properties:
+
+Key.Name = "Key"
+Key.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = Key
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+Main.Size = UDim2.new(0, 500, 0, 187)
+Main.ZIndex = 0
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0500000007, 0, 0.134099811, 0)
+Title.Size = UDim2.new(0, 200, 0, 16)
+Title.ZIndex = 2
+Title.Font = Enum.Font.GothamBold
+Title.Text = "Dreck Hub"
+Title.TextColor3 = Color3.fromRGB(240, 240, 240)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = Main
+
+Shadow.Name = "Shadow"
+Shadow.Parent = Main
+Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow.BackgroundTransparency = 1.000
+Shadow.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Shadow.BorderSizePixel = 0
+Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+Shadow.Size = UDim2.new(1, 35, 1.09625673, 35)
+
+Image.Name = "Image"
+Image.Parent = Shadow
+Image.AnchorPoint = Vector2.new(0.5, 0.5)
+Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image.BackgroundTransparency = 1.000
+Image.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image.BorderSizePixel = 0
+Image.Position = UDim2.new(0.5, 0, 0.5, 0)
+Image.Size = UDim2.new(1.60000002, 0, 1.29999995, 0)
+Image.Image = "rbxassetid://5587865193"
+Image.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Image.ImageTransparency = 0.190
+
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = Main
+Subtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.BackgroundTransparency = 1.000
+Subtitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Subtitle.BorderSizePixel = 0
+Subtitle.Position = UDim2.new(0.0500000007, 0, 0.22243315, 0)
+Subtitle.Size = UDim2.new(0, 200, 0, 13)
+Subtitle.ZIndex = 2
+Subtitle.Font = Enum.Font.GothamMedium
+Subtitle.Text = "Key System"
+Subtitle.TextColor3 = Color3.fromRGB(200, 200, 200)
+Subtitle.TextScaled = true
+Subtitle.TextSize = 14.000
+Subtitle.TextWrapped = true
+Subtitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Input.Name = "Input"
+Input.Parent = Main
+Input.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Input.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.0500000007, 0, 0.493475944, 0)
+Input.Size = UDim2.new(0, 206, 0, 35)
+
+UICorner_2.CornerRadius = UDim.new(0, 6)
+UICorner_2.Parent = Input
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Parent = Input
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+
+Carregando.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+Carregando.Name = "Carregando"
+Carregando.Parent = UIStroke
+
+Sucesso.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+Sucesso.Name = "Sucesso"
+Sucesso.Parent = UIStroke
+
+erro.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+erro.Name = "erro"
+erro.Parent = UIStroke
+
+InputBox.Name = "InputBox"
+InputBox.Parent = Input
+InputBox.AnchorPoint = Vector2.new(0.5, 0.5)
+InputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InputBox.BackgroundTransparency = 1.000
+InputBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+InputBox.BorderSizePixel = 0
+InputBox.Position = UDim2.new(0.517499566, 0, 0.5, 0)
+InputBox.Size = UDim2.new(1, -15, 0, 14)
+InputBox.ClearTextOnFocus = false
+InputBox.Font = Enum.Font.GothamMedium
+InputBox.PlaceholderText = "Insert key"
+InputBox.Text = ""
+InputBox.TextColor3 = Color3.fromRGB(240, 240, 240)
+InputBox.TextScaled = true
+InputBox.TextSize = 14.000
+InputBox.TextWrapped = true
+InputBox.TextXAlignment = Enum.TextXAlignment.Left
+
+KeyNote.Name = "KeyNote"
+KeyNote.Parent = Main
+KeyNote.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyNote.BackgroundTransparency = 1.000
+KeyNote.BorderColor3 = Color3.fromRGB(27, 42, 53)
+KeyNote.BorderSizePixel = 0
+KeyNote.Position = UDim2.new(0.0500000007, 0, 0.388208568, 0)
+KeyNote.Size = UDim2.new(0, 200, 0, 13)
+KeyNote.ZIndex = 2
+KeyNote.Font = Enum.Font.GothamMedium
+KeyNote.Text = "Key_XXXXXXXXX"
+KeyNote.TextColor3 = Color3.fromRGB(150, 150, 150)
+KeyNote.TextScaled = true
+KeyNote.TextSize = 14.000
+KeyNote.TextWrapped = true
+KeyNote.TextXAlignment = Enum.TextXAlignment.Left
+
+NoteTitle.Name = "NoteTitle"
+NoteTitle.Parent = Main
+NoteTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoteTitle.BackgroundTransparency = 1.000
+NoteTitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+NoteTitle.BorderSizePixel = 0
+NoteTitle.Position = UDim2.new(0.537999988, 0, 0.259866327, 0)
+NoteTitle.Size = UDim2.new(0, 200, 0, 13)
+NoteTitle.ZIndex = 5
+NoteTitle.Font = Enum.Font.GothamMedium
+NoteTitle.Text = "Observação:"
+NoteTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+NoteTitle.TextScaled = true
+NoteTitle.TextSize = 14.000
+NoteTitle.TextWrapped = true
+NoteTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+NoteMessage.Name = "NoteMessage"
+NoteMessage.Parent = Main
+NoteMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoteMessage.BackgroundTransparency = 1.000
+NoteMessage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+NoteMessage.BorderSizePixel = 0
+NoteMessage.Position = UDim2.new(0.537999988, 0, 0.35187158, 0)
+NoteMessage.Size = UDim2.new(0, 200, 0, 88)
+NoteMessage.ZIndex = 5
+NoteMessage.Font = Enum.Font.GothamMedium
+NoteMessage.Text = game:HttpGet("https://raw.githubusercontent.com/SourceRoblox/System-recursos/refs/heads/main/Note")
+NoteMessage.TextColor3 = Color3.fromRGB(240, 240, 240)
+NoteMessage.TextSize = 14.000
+NoteMessage.TextWrapped = true
+NoteMessage.TextXAlignment = Enum.TextXAlignment.Left
+NoteMessage.TextYAlignment = Enum.TextYAlignment.Top
+
+Hide.Name = "Hide"
+Hide.Parent = Main
+Hide.AnchorPoint = Vector2.new(0.5, 0.5)
+Hide.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hide.BackgroundTransparency = 1.000
+Hide.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Hide.BorderSizePixel = 0
+Hide.Position = UDim2.new(0.942000031, 0, 0.152406424, 0)
+Hide.Size = UDim2.new(0, 24, 0, 24)
+Hide.ZIndex = 5
+Hide.Image = "http://www.roblox.com/asset/?id=10137832201"
+Hide.ImageColor3 = Color3.fromRGB(240, 240, 240)
+Hide.ImageTransparency = 0.300
+Hide.ScaleType = Enum.ScaleType.Fit
+Hide.MouseButton1Up:Connect(function()
+	game.Players.LocalPlayer:Kick("Fechando...")
+end)
+
+Pattern.Name = "Pattern"
+Pattern.Parent = Main
+Pattern.BackgroundTransparency = 1.000
+Pattern.Position = UDim2.new(-0.00185314938, 0, 0.00514653651, 0)
+Pattern.Size = UDim2.new(0, 500, 0, 186)
+Pattern.ZIndex = 0
+Pattern.Image = "rbxassetid://2151741365"
+Pattern.ImageTransparency = 0
+Pattern.ScaleType = Enum.ScaleType.Tile
+Pattern.TileSize = UDim2.new(0, 250, 0, 250)
