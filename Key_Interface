@@ -25,12 +25,12 @@ Key.Parent = game.CoreGui
 Main.Name = "Main"
 Main.Parent = Key
 Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
 Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 Main.Size = UDim2.new(0, 500, 0, 187)
-Main.ZIndex = 0
+Main.ZIndex = 1
 
 Title.Name = "Title"
 Title.Parent = Main
@@ -61,6 +61,7 @@ Shadow.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Shadow.BorderSizePixel = 0
 Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 Shadow.Size = UDim2.new(1, 35, 1.09625673, 35)
+Shadow.ZIndex = 0
 
 Image.Name = "Image"
 Image.Parent = Shadow
@@ -74,6 +75,7 @@ Image.Size = UDim2.new(1.60000002, 0, 1.29999995, 0)
 Image.Image = "rbxassetid://5587865193"
 Image.ImageColor3 = Color3.fromRGB(20, 20, 20)
 Image.ImageTransparency = 0.190
+Image.ZIndex = 0
 
 Subtitle.Name = "Subtitle"
 Subtitle.Parent = Main
@@ -99,6 +101,7 @@ Input.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Input.BorderSizePixel = 0
 Input.Position = UDim2.new(0.0500000007, 0, 0.493475944, 0)
 Input.Size = UDim2.new(0, 206, 0, 35)
+Input.ZIndex = 2
 
 UICorner_2.CornerRadius = UDim.new(0, 6)
 UICorner_2.Parent = Input
@@ -137,6 +140,7 @@ InputBox.TextScaled = true
 InputBox.TextSize = 14.000
 InputBox.TextWrapped = true
 InputBox.TextXAlignment = Enum.TextXAlignment.Left
+InputBox.ZIndex = 2
 
 KeyNote.Name = "KeyNote"
 KeyNote.Parent = Main
@@ -212,8 +216,8 @@ Pattern.Parent = Main
 Pattern.BackgroundTransparency = 1.000
 Pattern.Position = UDim2.new(-0.00185314938, 0, 0.00514653651, 0)
 Pattern.Size = UDim2.new(0, 500, 0, 186)
-Pattern.ZIndex = 0
+Pattern.ZIndex = 1
 Pattern.Image = "rbxassetid://2151741365"
-Pattern.ImageTransparency = 0
+Pattern.ImageTransparency = 0.60
 Pattern.ScaleType = Enum.ScaleType.Tile
 Pattern.TileSize = UDim2.new(0, 250, 0, 250)
