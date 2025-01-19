@@ -207,9 +207,7 @@ Hide.Image = "http://www.roblox.com/asset/?id=10137832201"
 Hide.ImageColor3 = Color3.fromRGB(240, 240, 240)
 Hide.ImageTransparency = 0.300
 Hide.ScaleType = Enum.ScaleType.Fit
-Hide.MouseButton1Up:Connect(function()
-	game.Players.LocalPlayer:Kick("Fechando...")
-end)
+
 
 Pattern.Name = "Pattern"
 Pattern.Parent = Main
