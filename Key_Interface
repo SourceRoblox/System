@@ -10,6 +10,7 @@ local UICorner_2 = Instance.new("UICorner")
 local Carregando = Instance.new("UIGradient")
 local Sucesso = Instance.new("UIGradient")
 local erro = Instance.new("UIGradient")
+local amarelo = Instance.new("UIGradient")
 local InputBox = Instance.new("TextBox")
 local KeyNote = Instance.new("TextLabel")
 local NoteTitle = Instance.new("TextLabel")
@@ -121,6 +122,10 @@ Sucesso.Parent = UIStroke
 erro.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
 erro.Name = "erro"
 erro.Parent = UIStroke
+
+amarelo.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+amarelo.Name = "amarelo"
+amarelo.Parent = UIStroke
 
 InputBox.Name = "InputBox"
 InputBox.Parent = Input
