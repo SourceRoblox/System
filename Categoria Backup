@@ -1,1 +1,4 @@
-print("aaa")
+for i = 1, 10 do
+    print(10)
+    wait(1000)  -- 1000 ms = 1 segundo
+end
